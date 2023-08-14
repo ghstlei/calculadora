@@ -1,3 +1,5 @@
+// BOO HAHA :] FIQUE A VONTADE! <3
+
 package com.example.calculadora;
 
 import androidx.annotation.NonNull;
