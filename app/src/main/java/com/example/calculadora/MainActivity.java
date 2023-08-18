@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // -- INICIANDO BOTÕES ON CLICK --
         IniciarComponentes();
 
         getSupportActionBar().hide();
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             multiplicacao.setOnClickListener(this);
             divisao.setOnClickListener(this);
 
+
+        // -- COMANDO BOTÃO LIMPAR --
             bt_limpar.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
 
+        // -- COMANDO BACKSPACE (LIMPA O ÚLTIMO VALOR) --
             backspace.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -75,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
 
+        // -- CALCULAR RESULTADO --
             igual.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    // -- ATRELAR O ID A VARIÁVEL --
     private void IniciarComponentes(){
         numeroZero = findViewById(R.id.numero_zero);
         numeroUm = findViewById(R.id.numero_um);
@@ -122,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtExpressao = findViewById(R.id.txt_expressao);
     }
 
+    // -- ACRESCENTAR VALOR VAZIO AO LIMPAR DADOS E RESULTADO --
     public void AcrescentarExpressao(String string, boolean limpar_dados){
 
         if (txtResultado.getText().equals("")){
@@ -138,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // -- ACRESCENTAR O VALOR AO CLICAR NO BOTÃO --
     @Override
     public void onClick(View view) {
         int id = view.getId();
